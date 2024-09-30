@@ -2,6 +2,7 @@
   import AppHeader from './components/AppHeader.vue';
   import AppFooter from './components/AppFooter.vue';
   import AppMain from './components/AppMain.vue';
+  import { store } from './store';
 
   export default{
     components:{
@@ -13,6 +14,7 @@
     data(){
       return{
         test: 'Hello!',
+        store,
       }
     }
   }
@@ -22,11 +24,11 @@
 
 
 <template>
-  <AppHeader></AppHeader>
+  <AppHeader v-if="!store.notFound"></AppHeader>
 
   <AppMain></AppMain>
 
-  <AppFooter></AppFooter>
+  <AppFooter v-if="!store.notFound"></AppFooter>
 </template>
 
 
