@@ -71,7 +71,7 @@ const gods = [
         id: 8,
         race: 'Orco',
         name: 'Ruokshak',
-        domanis: ['Orchi', 'Conoscenza', 'Aaa'],
+        domanis: ['Orchi', 'Conoscenza', 'Empatia'],
         img: './imgs/Orco.png',
         description: ''
     },
