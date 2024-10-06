@@ -1,0 +1,13 @@
+{
+    "short_name": "Quolor",
+    "name": "Quolor",
+    "icons": [
+        {
+            "src": "/imgs/MioMarchio.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        }
+    ],
+    "theme_color": "#6e06f7",
+    "display": "fullscreen"
+}
