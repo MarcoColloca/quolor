@@ -8,10 +8,11 @@ export interface God {
     domains: string[]
     img: string
     description: string
+    showDescription: boolean
 }
 
 interface Gods {
-    gods: God[]
+    gods: God[]    
 }
 
 export const useGodsStore = defineStore('god', {
@@ -23,7 +24,8 @@ export const useGodsStore = defineStore('god', {
                 name: 'Liz Anazarna',
                 domains: ['Aasimar', 'Guerra', 'Onore'],
                 img: './imgs/Aasimar.png',
-                description: ''
+                description: '',
+                showDescription: false
             },
             {
                 id: 2,
@@ -31,7 +33,8 @@ export const useGodsStore = defineStore('god', {
                 name: 'Jaros Silverdream',
                 domains: ['Dragonborn', 'Giustizia', 'Vendetta'],
                 img: './imgs/Dragonborn.png',
-                description: ''
+                description: '',
+                showDescription: false
             },
             {
                 id: 3,
@@ -39,7 +42,8 @@ export const useGodsStore = defineStore('god', {
                 name: 'Ver\'An Amasrendaen',
                 domains: ['Elfi', 'Luce', 'Disciplina'],
                 img: './imgs/Elfo.png',
-                description: ''
+                description: '',
+                showDescription: false
             },
             {
                 id: 4,
@@ -47,7 +51,8 @@ export const useGodsStore = defineStore('god', {
                 name: 'Zoe',
                 domains: ['Gnomi', 'Oscurità', 'Morte'],
                 img: './imgs/Gnomo.png',
-                description: ''
+                description: '',
+                showDescription: false
             },
             {
                 id: 5,
@@ -55,7 +60,8 @@ export const useGodsStore = defineStore('god', {
                 name: 'Rok il Distruttore',
                 domains: ['Goliath', 'Distruzione', 'Ambizione'],
                 img: './imgs/Goliath.png',
-                description: ''
+                description: '',
+                showDescription: false
             },
             {
                 id: 6,
@@ -63,7 +69,8 @@ export const useGodsStore = defineStore('god', {
                 name: 'Estella',
                 domains: ['Halfling', 'Magia', 'Fortuna'],
                 img: './imgs/Halfling.png',
-                description: ''
+                description: '',
+                showDescription: false
             },
             {
                 id: 7,
@@ -71,7 +78,8 @@ export const useGodsStore = defineStore('god', {
                 name: 'Mormonth',
                 domains: ['Nani', 'Protezione', 'Natura'],
                 img: './imgs/Nano.png',
-                description: ''
+                description: '',
+                showDescription: false
             },
             {
                 id: 8,
@@ -79,7 +87,8 @@ export const useGodsStore = defineStore('god', {
                 name: 'Ruokshak',
                 domains: ['Orchi', 'Conoscenza', 'Empatia'],
                 img: './imgs/Orco.png',
-                description: ''
+                description: '',
+                showDescription: false
             },
             {
                 id: 9,
@@ -87,7 +96,8 @@ export const useGodsStore = defineStore('god', {
                 name: 'Trixie',
                 domains: ['Tiefling', 'Arte', 'Viaggi'],
                 img: './imgs/Tiefling.png',
-                description: ''
+                description: '',
+                showDescription: false
             },
             {
                 id: 10,
@@ -95,9 +105,10 @@ export const useGodsStore = defineStore('god', {
                 name: '"Dio degli Uomini"',
                 domains: ['Umani', 'Controllo', 'Segreti'],
                 img: './imgs/Umano.png',
-                description: ''
+                description: '',
+                showDescription: false
             }
-        ]
+        ],        
     }),
 
     actions:{
@@ -118,6 +129,13 @@ export const useGodsStore = defineStore('god', {
             });
         
             return myArray
+        },
+        returnDescription(description:string):string {
+            if (!description) {
+                return 'Ancora Nessuna Descrizione.'
+            }
+        
+            return description
         }
     }
 })

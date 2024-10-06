@@ -3,6 +3,7 @@
 import { ref } from "vue";
 import { useGodsStore } from "../stores/godsStore";
 
+
 // Componenti
 import GodCard from "../components/single-components/Gods/GodCard.vue";
 import GodModal from "../components/single-components/Gods/GodModal.vue";
@@ -11,21 +12,13 @@ const godStore = useGodsStore();
 
 const gods = godStore.gods;
 
-const refactorDomains = godStore.refactorDomains;
 
-// Funzioni di esempio per returnDescription e refactorDomains
-function returnDescription(description) {
-    if (!description) {
-        return 'Ancora Nessuna Descrizione'
-    }
-
-    return description
-}
+const description = godStore.returnDescription;
 
 </script>
 
 <template>    
-    <section class="py-5">
+    <section class="py-5 relative">
         <div class="flex w-full justify-center mb-4">
             <h1 class="text-6xl lessgo">
                 Divinità
@@ -35,8 +28,15 @@ function returnDescription(description) {
             <div class="flex flex-wrap justify-center gap-5">
                 <div v-for="(god, i) in gods" :key="i" class="w-full md:w-1/4 p-1 bg-[#0A0A0A] shadow-md rounded-lg">
                     <GodCard
-                     :god = god
+                    :god = god
+                    @click="god.showDescription = !god.showDescription, console.log(god.showDescription)"
                     ></GodCard>
+                    
+                    <GodModal
+                    v-show="god.showDescription"
+                    :god = god
+                    ></GodModal>
+                    
                 </div>
             </div>
         </div>
