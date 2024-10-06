@@ -22,8 +22,8 @@
                     In ogni pagina sarà invece presente un indice per mostrare le diverse informazioni suddivise per macroaree.                    
                 </p>
                 <p class="text-red-500 bg-black px-3 py-1 w-3/12 text-lg">
-                    Tente sempre in considerazione che è un work in progress, al momento molto in progress. Verrà aggiornato in tempo reale
-                    nel corso della campagna.
+                    Tenete sempre in considerazione che è un work in progress, al momento molto in progress. 
+                    Verrà aggiornato in tempo reale nel corso della campagna.
                 </p>
             </div>
         </div>
