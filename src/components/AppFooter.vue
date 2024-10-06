@@ -1,7 +1,9 @@
 <script>
+    import BentoBox from './single-components/general/BentoBox.vue';
 
     export default {
         components:{
+            BentoBox
         },
 
         data(){            
@@ -19,10 +21,12 @@
 <template>
     <!-- Page Footer -->
     <footer>
-        <div class="container">
-            <h1>
-                I'm a Wonderful Footer
-            </h1>
+        <div class="container flex justify-center">
+            <BentoBox class="text-white flex justify-center items-center w-max">
+                <h2>
+                    Marco Colloca Full Stack Web Developer
+                </h2>
+            </BentoBox>
         </div>
     </footer>
 </template>

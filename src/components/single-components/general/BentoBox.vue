@@ -1,7 +1,5 @@
-<script>
-    export default{
-        
-    }
+<script setup>
+
 </script>
 
 
@@ -21,7 +19,7 @@
 
 <style lang="scss" scoped>
     .bento-box{
-        border: 1px solid coral;
+        border: 1px solid rgb(255, 255, 255);
         border-radius: 18px;
         background-color: coral;
         padding: 10px;

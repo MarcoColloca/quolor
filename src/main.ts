@@ -1,5 +1,7 @@
 import { createApp } from 'vue'
+import { createPinia } from 'pinia';
 import './assets/style/general.scss'
+import './assets/style/tailwind.css';
 import router from './router'
 import App from './App.vue'
 import * as bootstrap from 'bootstrap'
@@ -43,7 +45,9 @@ import{
 library.add(faClockSolid, faPlusSolid, faScrollSolid, faClockRegular, faChevronDownSolid, faTwitter, faFacebookF, faInstagram, faLinkedin, faArrowUpLongSolid, faCircleSolid, faArrowRightLongSolid, faUserRegular, faFileLinesRegular, faEyeSolid, faCalendarRegular, faLocationDotSolid, faRectangleListSolid)
 
 const app = createApp(App)
+const pinia = createPinia();
 
+app.use(pinia)
 app.use(router)
 app.component('font-awesome-icon', FontAwesomeIcon)
 

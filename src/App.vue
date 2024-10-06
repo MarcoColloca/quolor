@@ -1,38 +1,25 @@
-<script>
-  import AppHeader from './components/AppHeader.vue';
-  import AppFooter from './components/AppFooter.vue';
-  import AppMain from './components/AppMain.vue';
-  import { store } from './store';
+<script setup lang="ts">
+import { ref } from 'vue';
+import AppHeader from './components/AppHeader.vue';
+import AppMain from './components/AppMain.vue';
+import AppFooter from './components/AppFooter.vue';
+import { useMainStore } from './stores/mainStore'; // Importa lo store di Pinia
 
-  export default{
-    components:{
-      AppHeader,
-      AppMain,
-      AppFooter,
-    },
+// Inizializza lo store
+const mainStore = useMainStore();
 
-    data(){
-      return{
-        test: 'Hello!',
-        store,
-      }
-    }
-  }
+// Definisci variabili reattive
+const test = ref('Hello!');
 </script>
 
-
-
-
 <template>
-  <AppHeader v-if="!store.notFound"></AppHeader>
+  <!-- Usa lo store per condizionare l'inclusione dell'header e del footer -->
+  <AppHeader v-if="!mainStore.notFound"></AppHeader>
 
   <AppMain></AppMain>
 
-  <AppFooter v-if="!store.notFound"></AppFooter>
+  <AppFooter v-if="!mainStore.notFound"></AppFooter>
 </template>
-
-
-
 
 <style lang="scss">
 #app{

@@ -1,12 +1,12 @@
 import { createWebHistory, createRouter } from 'vue-router'
 
-import { store } from './store'
+import { useMainStore } from './stores/mainStore';  // Importa lo store di Pinia
 
 
 // Import delle Pagine dell'Applicativo
-import AppHome from './pages/AppHome.vue'
+//import AppHome from './pages/AppHome.vue'
 import AppNotFound from './pages/AppNotFound.vue'
-import AppMap from './pages/AppMap.vue'
+//import AppMap from './pages/AppMap.vue'
 
 
 // Creazione delle Rotte
@@ -14,11 +14,11 @@ import AppMap from './pages/AppMap.vue'
 const routes = [
 
     { 
-        path: '/', name:'home', component:AppHome 
+        path: '/', name:'home', component:() => import('./pages/AppHome.vue') 
     },
 
     { 
-        path: '/map', name:'map', component:AppMap 
+        path: '/map', name:'map', component:() => import('./pages/AppMap.vue')  
     },
      
     {   // will match everything and put it under `route.params.pathMatch`
@@ -39,11 +39,13 @@ const router = createRouter({
 
 // Guard beforeEach → Controlla i cambiamenti nelle rotte.
 router.beforeEach((to, from) => {
+    // Inizializza il Pinia store
+  const mainStore = useMainStore();
     // Se la rotta ha nome 'NotFound', imposta notFound su true nello store
     if (to.name === 'NotFound') {
-        store.notFound = true;
+        mainStore.notFound = true;
     } else {
-        store.notFound = false;
+        mainStore.notFound = false;
     }    
 })
 

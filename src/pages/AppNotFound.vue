@@ -1,15 +1,5 @@
-<script>
+<script setup>
 
-    export default {
-        components:{
-        },
-
-        data(){            
-            return {
-            }
-        }
-        
-    }
 </script>
 
 
@@ -19,8 +9,8 @@
 <template>
     <section>
         <div class="container404">
-            <img src="/public/imgs/mf404.png" alt="404 img">
-            <h1 class="text-center p-3">
+            <img src="/imgs/mf404.png" alt="404 img">
+            <h1 class="text-center p-3 text-4xl">
                 Oh ciao. Non mi aspettavo di trovarti qui. <br>
                 Ho quasi finito. Puoi attendere un attimo... <br>
                 o tornare alla <RouterLink  :to="{name: 'home'}">Home.</RouterLink>
@@ -52,7 +42,7 @@ section{
 
         img{
             width: 100%;
-            max-width: 700px;
+            max-width: 45%;
         }
 
         h1{

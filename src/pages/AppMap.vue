@@ -1,44 +1,42 @@
-<script>
-import { store } from '../store'; // Import del tuo store Vuex o reactive
+<script setup>
+import { ref } from 'vue';
+import { useMapStore } from '../stores/mapStore'; // Importa lo store di Pinia
 
-export default {
-  data() {
-    return {
-      store,         // Usa lo store importato
-      scale: 1,      // Scala iniziale
-      originX: "50%",  // Punto di origine X per lo zoom
-      originY: "50%",  // Punto di origine Y per lo zoom
-    };
-  },
-  methods: {
-    zoom(event) {
-      const rect = this.$refs.mapImage.getBoundingClientRect();
-      const clickX = event.clientX - rect.left;  // Posizione del clic sull'immagine
-      const clickY = event.clientY - rect.top;   // Posizione del clic sull'immagine
+// Inizializza lo store
+const mapStore = useMapStore();
 
-      // Converti la posizione del clic in percentuali rispetto all'immagine
-      const originXPercent = (clickX / rect.width) * 100 + "%";
-      const originYPercent = (clickY / rect.height) * 100 + "%";
+// Definisci le variabili reattive
+const scale = ref(1);
+const originX = ref("50%");
+const originY = ref("50%");
 
-      // Imposta il nuovo punto di origine per lo zoom
-      this.originX = originXPercent;
-      this.originY = originYPercent;
+// Metodo per gestire lo zoom
+function zoom(event) {
+  const rect = event.target.getBoundingClientRect();  // Ottenere le dimensioni e la posizione dell'immagine
+  const clickX = event.clientX - rect.left;  // Posizione del clic sull'immagine
+  const clickY = event.clientY - rect.top;   // Posizione del clic sull'immagine
 
-      // Alterna il fattore di scala tra 1 e 2
-      this.scale = this.scale === 1 ? 2.5 : 1;
-    },
-  },
-};
+  // Converti la posizione del clic in percentuali rispetto all'immagine
+  const originXPercent = (clickX / rect.width) * 100 + "%";
+  const originYPercent = (clickY / rect.height) * 100 + "%";
+
+  // Imposta il nuovo punto di origine per lo zoom
+  originX.value = originXPercent;
+  originY.value = originYPercent;
+
+  // Alterna il fattore di scala tra 1 e 2.5
+  scale.value = scale.value === 1 ? 2.5 : 1;
+}
 </script>
 
 <template>
   <div class="img-container" @click="zoom">
     <img
       :style="{ transform: 'scale(' + scale + ')', transformOrigin: originX + ' ' + originY }"
-      src="/public/imgs/mappa.jpg"
+      src="/imgs/mappa.jpg"
       alt="Mappa"
       ref="mapImage"
-      v-if="store.maps.quolor.active"
+      v-if="mapStore.quolor.active"
     />
   </div>
 </template>
