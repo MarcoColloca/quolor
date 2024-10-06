@@ -13,7 +13,7 @@ const returnDescription = godStore.returnDescription
     <div class="my-modal-container">
        
         <div class="my-modal-box">
-            <h1 class="text-coral">{{ god.name }}</h1>
+            <h1 class="text-coral text-3xl">{{ god.name }}</h1>
             <p class="text-white">                
                 {{ returnDescription(god.description) }}
             </p>
@@ -40,7 +40,6 @@ const returnDescription = godStore.returnDescription
     align-items: center;
     background-color: rgba(0, 0, 0, 0.459);
     padding: 15px;
-    color: red;
     .my-modal-box{
         background-color: #0A0A0A;
         min-height: 50%;

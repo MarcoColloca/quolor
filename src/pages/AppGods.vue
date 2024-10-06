@@ -20,7 +20,7 @@ const description = godStore.returnDescription;
 <template>    
     <section class="py-5 relative">
         <div class="flex w-full justify-center mb-4">
-            <h1 class="text-6xl lessgo">
+            <h1 class="text-sm text-coral lg:text-6xl rainbow">
                 Divinità
             </h1>
         </div>
@@ -46,27 +46,7 @@ const description = godStore.returnDescription;
 
 <style lang="scss" scoped>
 
-
-/* Main Title */
-
-.main-title {
-    font-size: 80px;
-    color: crimson;
-    animation: pulse 3s infinite;
-    will-change: color;
-}
-
-
-
 /* (ง•̀_•́)ง */
-
-.lessgo {
-    color: crimson;
-    font-size: 70px;
-    animation: pulse 3s infinite;
-    will-change: color;
-}
-
 
 /* Animazioni */
 
