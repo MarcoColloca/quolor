@@ -1,0 +1,185 @@
+@use './variables' as *;
+
+.glow-box-light-blue {
+    background-color: #000; 
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+  
+    // Aanimazione glow infinita
+    animation: glow 2s infinite alternate;
+  
+    @keyframes glow {
+      0% {
+        box-shadow: 0 0 5px rgba(0, 255, 255, 0.2),
+                    0 0 10px rgba(0, 255, 255, 0.4),
+                    0 0 15px rgba(0, 255, 255, 0.6),
+                    0 0 20px rgba(0, 255, 255, 0.8);
+      }
+      100% {
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.8),
+                    0 0 30px rgba(0, 255, 255, 1),
+                    0 0 40px rgba(0, 255, 255, 1),
+                    0 0 50px rgba(0, 255, 255, 1);
+      }
+    }
+}
+  
+
+.glow-text-crimson {   
+
+    // Animazione glow infinita
+    animation: glowCrimson 2s infinite alternate;
+
+    @keyframes glowCrimson {
+        0% {
+        text-shadow: 
+            0 0 5px rgba(220, 20, 60, 0.2),
+            0 0 10px rgba(220, 20, 60, 0.4),
+            0 0 15px rgba(220, 20, 60, 0.6),
+            0 0 20px rgba(220, 20, 60, 0.8);
+        }
+        100% {
+        text-shadow: 
+            0 0 20px rgba(220, 20, 60, 0.8),
+            0 0 30px rgba(220, 20, 60, 1),
+            0 0 40px rgba(220, 20, 60, 1),
+            0 0 50px rgba(220, 20, 60, 1);
+           
+        }
+    }
+}
+
+.glow-text-gold {   
+
+    // Animazione glow infinita
+    animation: glowGold 2s infinite alternate;
+
+    @keyframes glowGold {
+        0% {
+        text-shadow: 
+            0 0 5px rgba(218, 165, 32, 0.2),
+            0 0 10px rgba(218, 165, 32, 0.4),
+            0 0 15px rgba(218, 165, 32, 0.6),
+            0 0 20px rgba(218, 165, 32, 0.8);
+        }
+        100% {
+        text-shadow: 
+            0 0 20px rgba(218, 165, 32, 0.8),
+            0 0 30px rgba(218, 165, 32, 1),
+            0 0 40px rgba(218, 165, 32, 1),
+            0 0 50px rgba(218, 165, 32, 1);
+        }
+    }
+}
+
+.glow-text-light-blue {
+    // Animazione glow infinita
+    animation: glowLightBlue 2s infinite alternate;
+
+    @keyframes glowLightBlue {
+        0% {
+        text-shadow: 0 0 5px rgba(0, 255, 255, 0.2),
+                        0 0 10px rgba(0, 255, 255, 0.4),
+                        0 0 15px rgba(0, 255, 255, 0.6),
+                        0 0 20px rgba(0, 255, 255, 0.8);
+        }
+        100% {
+        text-shadow: 0 0 20px rgba(0, 255, 255, 0.8),
+                        0 0 30px rgba(0, 255, 255, 1),
+                        0 0 40px rgba(0, 255, 255, 1),
+                        0 0 50px rgba(0, 255, 255, 1);
+        }
+    }
+}
+
+.glow-text-purple {   
+
+    // Animazione glow infinita
+    animation: glowPurple 2s infinite alternate;
+
+    @keyframes glowPurple {
+        0% {
+        text-shadow: 
+            0 0 5px rgba(38, 0, 255, 0.2),
+            0 0 10px rgba(38, 0, 255, 0.4),
+            0 0 15px rgba(38, 0, 255, 0.6),
+            0 0 20px rgba(38, 0, 255, 0.8);
+        }
+        100% {
+        text-shadow: 
+            0 0 20px rgba(38, 0, 255, 0.8),
+            0 0 30px rgba(38, 0, 255, 1),
+            0 0 40px rgba(38, 0, 255, 1),
+            0 0 50px rgba(38, 0, 255, 1);
+        }
+    }
+}
+  
+ .rainbow{
+    animation: rainbow 10s infinite alternate;
+
+    @keyframes rainbow {
+        0% {
+            color: currentColor;
+        }
+        
+        10%{
+            color: black;           
+        } 
+
+        20%{
+            color: greenyellow;
+        }
+        
+        30%{
+            color: cyan;
+        }
+
+        40%{
+            color:deeppink;
+        }
+        
+        50%{
+            color: coral;
+        }
+
+        60%{
+            color: blueviolet;
+        }
+
+        70%{
+            color: crimson;
+        }
+    
+        80%{
+            color: cornflowerblue
+        }
+        
+        90%{            
+            color: white;
+        }
+
+        100%{
+            color: currentColor;
+        }
+    }
+ }
+
+
+.run-left{
+    
+    animation: run 10s linear infinite;
+
+    @keyframes run {
+        0%{
+            transform: translateX(0%) ;
+        }
+
+        100%{
+            transform: translateX(-50%);
+        }
+    }
+}
