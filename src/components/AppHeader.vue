@@ -24,7 +24,7 @@
                         <RouterLink  :to="{name: 'map'}">Mappe</RouterLink>
                     </li>
                     <li>
-                        Link
+                        <RouterLink  :to="{name: 'gods'}">Gods</RouterLink>
                     </li>
                     <li>
                         Link

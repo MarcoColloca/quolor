@@ -14,17 +14,28 @@ import AppNotFound from './pages/AppNotFound.vue'
 const routes = [
 
     { 
-        path: '/', name:'home', component:() => import('./pages/AppHome.vue') 
+        path: '/', 
+        name:'home', 
+        component:() => import('./pages/AppHome.vue') 
     },
 
     { 
-        path: '/map', name:'map', component:() => import('./pages/AppMap.vue')  
+        path: '/map', 
+        name:'map', 
+        component:() => import('./pages/AppMap.vue')  
+    },
+
+    { 
+        path: '/gods', 
+        name:'gods', 
+        component:() => import('./pages/AppGods.vue')  
     },
      
     {   // will match everything and put it under `route.params.pathMatch`
-        path: '/:pathMatch(.*)*', name: 'NotFound', component: AppNotFound 
+        path: '/:pathMatch(.*)*', 
+        name: 'NotFound', 
+        component: AppNotFound 
     },
-
 ]
 
 
