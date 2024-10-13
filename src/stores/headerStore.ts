@@ -5,16 +5,11 @@ export interface SubPath {
     pathName: string;   
 }
 
-export interface ActiveElement {
-    name: string;
-    active: boolean;
-}
-
 export interface NavbarLink {
     name: string;
     pathName: string;
+    showSubMenu?: boolean;
     subPaths?: SubPath[];
-    activeElements?: ActiveElement[];
 }
 
 
@@ -40,11 +35,29 @@ export const useHeaderStore = defineStore('header', {
         {
             name: 'Divinità',
             pathName: 'gods'
-        }
+        },
+        {
+            name: 'Fazioni',
+            pathName: 'fazioni',
+            showSubMenu: false,
+            subPaths: [
+                {
+                    name: 'Nazioni',
+                    pathName: 'nazioni'
+                },
+                {
+                    name: 'Associazioni',
+                    pathName: 'associazioni'
+                }
+            ]
+        },
     ]
   }),
 
   actions: {
+    toggleSubMenu(link: NavbarLink){
+        link.showSubMenu = !link.showSubMenu
+    }
   }
   
 });

@@ -30,6 +30,24 @@ const routes = [
         name:'gods', 
         component:() => import('./pages/AppGods.vue')  
     },
+
+    { 
+        path: '/fazioni', 
+        name:'fazioni', 
+        component:() => import('./pages/Fazioni/AppFactions.vue'),
+        children: [
+            {
+                path: '/nazioni', 
+                name:'nazioni', 
+                component:() => import('./pages/Fazioni/ListaNazioni.vue'),                
+            },
+            {
+                path: '/associazioni', 
+                name:'associazioni', 
+                component:() => import('./pages/Fazioni/ListaAssociazioni.vue'),                
+            }
+        ]
+    },
      
     {   // will match everything and put it under `route.params.pathMatch`
         path: '/:pathMatch(.*)*', 
