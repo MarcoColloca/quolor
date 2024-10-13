@@ -11,8 +11,11 @@ export const useMainStore = defineStore('main', {
   }),
 
   actions: {
-    toggleNotFound() {
+    toggleNotFound():void {
       this.notFound = !this.notFound;
     },
+    capitalizeFirstLetter(string: string): string {
+      return string.charAt(0).toUpperCase() + string.slice(1);
+    }
   },
 });
