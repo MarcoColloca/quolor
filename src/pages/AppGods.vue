@@ -1,16 +1,21 @@
 <script setup>
-// Store
+// Generali
 import { ref } from "vue";
+import { storeToRefs } from "pinia";
+
+// Store
 import { useGodsStore } from "../stores/godsStore";
+const godStore = useGodsStore();
 
 
 // Componenti
 import GodCard from "../components/single-components/Gods/GodCard.vue";
 import GodModal from "../components/single-components/Gods/GodModal.vue";
 
-const godStore = useGodsStore();
 
-const gods = godStore.gods;
+//const gods = godStore.gods;
+
+const { gods } = storeToRefs(godStore);
 
 
 const description = godStore.returnDescription;

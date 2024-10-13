@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { God, useGodsStore } from "../../../stores/godsStore";
+import {type God, useGodsStore } from "../../../stores/godsStore";
 const godStore = useGodsStore();
 const refactorDomains = godStore.refactorDomains;
 
