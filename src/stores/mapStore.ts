@@ -1,10 +1,14 @@
 import { defineStore } from 'pinia';
-import { ref } from 'vue';
 
-interface MapState {
-  quolor: {
-    active: boolean;
-  };
+export interface Map{
+  name: string;
+  url: string;
+  active: boolean;
+}
+
+
+export interface MapState {
+  maps: Map[];
   scale: number;
   originX: string;
   originY: string;
@@ -12,9 +16,18 @@ interface MapState {
 
 export const useMapStore = defineStore('map', {
   state: (): MapState => ({
-    quolor: {
-      active: true,
-    },
+    maps: [
+      {
+        name: 'quolor',
+        url: '/imgs/mappa.jpg',
+        active: true
+      },
+      {
+        name: 'political',
+        url: '/imgs/politica.jpg',
+        active: false
+      }
+    ],
     scale: 1,          // Scala iniziale
     originX: "50%",    // Punto di origine X iniziale
     originY: "50%",    // Punto di origine Y iniziale
@@ -36,6 +49,11 @@ export const useMapStore = defineStore('map', {
 
       // Alterna il fattore di scala
       this.scale = this.scale === 1 ? 2.5 : 1;
+    },
+    changeActiveMap(selectedMapName: string) {
+      this.maps.forEach(map => {
+        map.active = map.name === selectedMapName;
+      });
     },
   },
 });
