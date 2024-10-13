@@ -5,7 +5,6 @@ import { storeToRefs } from 'pinia';
 // Store
 import { useHeaderStore } from '../../../stores/headerStore';
 const headerStore = useHeaderStore();
-console.log(headerStore);
 // VARIABILI
 const { navbarLinks } = storeToRefs(headerStore);
 

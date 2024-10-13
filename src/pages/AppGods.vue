@@ -34,7 +34,7 @@ const description = godStore.returnDescription;
                 <div v-for="(god, i) in gods" :key="i" class="w-full md:w-1/4 p-1 bg-[#0A0A0A] shadow-md rounded-lg">
                     <GodCard
                     :god = god
-                    @click="god.showDescription = !god.showDescription, console.log(god.showDescription)"
+                    @click="god.showDescription = !god.showDescription"
                     ></GodCard>
                     
                     <GodModal
