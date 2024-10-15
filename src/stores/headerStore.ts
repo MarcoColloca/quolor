@@ -38,7 +38,7 @@ export const useHeaderStore = defineStore('header', {
         },
         {
             name: 'Fazioni',
-            pathName: 'fazioni',
+            pathName: 'nazioni',
             showSubMenu: false,
             subPaths: [
                 {
