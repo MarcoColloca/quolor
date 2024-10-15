@@ -68,6 +68,36 @@ export const useFactionsStore = defineStore('faction', {
           },
         ],
       },
+      {
+        name: 'Cavalca Grifoni di Melodia',
+        imgUrl: '/imgs/associazioni/cavalcaGrifoni/LogoCavalcaGrifoni.jpg',
+        description: "Descrizione Cavalca Grifoni.",
+        showDescription: false,
+        showVips: false,
+        personeImportanti: [
+          {
+            nome: 'Belecthor',
+            ruolo: 'Gran Maestro',
+            descrizione: 'Lui è il capo dei cavalca Grifoni! Il suo grifone è Syphalus, ha un\'aquila di nome Fannie.',
+            imgUrl: '/imgs/associazioni/cavalcaGrifoni/belecthor.jpg'
+          },
+        ],
+      },
+      {
+        name: 'Lame di Ossidiana',
+        imgUrl: '/imgs/associazioni/lameOssidiana/LogoLameOssidiana.jpg',
+        description: "Descrizione Lame di Ossidiana.",
+        showDescription: false,
+        showVips: false,
+        personeImportanti: [
+          {
+            nome: 'Lama di Ossidiana',
+            ruolo: 'Cultista Standard',
+            descrizione: 'Lui è un cultista standard!',
+            imgUrl: '/imgs/associazioni/lameOssidiana/cultista.jpg'
+          },
+        ],
+      },
     ]
   }),
 

@@ -23,7 +23,7 @@ const toggleVips = factionsStore.toggleVips
             
             <div class="content">
                 <div class="w-4/12 p-3 flex justify-center"  v-for="(vip, index) in props.associazione.personeImportanti" :key="index">
-                    <div class="vip-card px-5">
+                    <div class="vip-card px-5 py-2">
                         <img :src="vip.imgUrl" alt="Immagine">
                         <h3>{{ vip.nome }}</h3>
                         <small>{{ vip.ruolo }}</small>

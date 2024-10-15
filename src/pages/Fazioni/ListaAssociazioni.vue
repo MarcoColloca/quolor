@@ -28,8 +28,8 @@
     </div>
     <div class="container mx-auto">
         <div class="flex">
-            <div class="w-4/12">
-                <div v-for="(associazione, index) in associazioni" :key="index">
+            <div class="w-4/12 px-5" v-for="(associazione, index) in associazioni" :key="index">
+                <div>
                     <CardAssociazione
                     :associazione="associazione"
                     ></CardAssociazione>
