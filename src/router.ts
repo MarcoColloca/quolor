@@ -12,25 +12,26 @@ import AppNotFound from './pages/AppNotFound.vue'
 // Creazione delle Rotte
 
 const routes = [
-
     { 
         path: '/', 
         name:'home', 
         component:() => import('./pages/AppHome.vue') 
     },
-
     { 
         path: '/map', 
         name:'map', 
         component:() => import('./pages/AppMap.vue')  
     },
-
     { 
         path: '/gods', 
         name:'gods', 
         component:() => import('./pages/AppGods.vue')  
     },
-
+    { 
+        path: '/timeline', 
+        name:'timeline', 
+        component:() => import('./pages/AppTimeline.vue')
+    },
     { 
         path: '/fazioni', 
         name:'fazioni', 
@@ -47,13 +48,12 @@ const routes = [
                 component:() => import('./pages/Fazioni/ListaAssociazioni.vue'),                
             }
         ]
-    },
-     
+    },     
     {   // will match everything and put it under `route.params.pathMatch`
         path: '/:pathMatch(.*)*', 
         name: 'NotFound', 
         component: AppNotFound 
-    },
+    }
 ]
 
 

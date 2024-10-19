@@ -37,6 +37,10 @@ export const useHeaderStore = defineStore('header', {
             pathName: 'gods'
         },
         {
+            name: 'Timeline',
+            pathName: 'timeline'
+        },
+        {
             name: 'Fazioni',
             pathName: 'nazioni',
             showSubMenu: false,
