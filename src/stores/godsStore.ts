@@ -23,7 +23,7 @@ export const useGodsStore = defineStore('god', {
                 race: 'Aasimar',
                 name: 'Liz Anazarna',
                 domains: ['Aasimar', 'Guerra', 'Onore'],
-                img: './imgs/Aasimar.png',
+                img: './imgs/dei/Aasimar.png',
                 description: '',
                 showDescription: false
             },
@@ -32,7 +32,7 @@ export const useGodsStore = defineStore('god', {
                 race: 'Dragonborn',
                 name: 'Jaros Silverdream',
                 domains: ['Dragonborn', 'Giustizia', 'Vendetta'],
-                img: './imgs/Dragonborn.png',
+                img: './imgs/dei/Dragonborn.png',
                 description: '',
                 showDescription: false
             },
@@ -41,7 +41,7 @@ export const useGodsStore = defineStore('god', {
                 race: 'Elfo',
                 name: 'Ver\'An Amasrendaen',
                 domains: ['Elfi', 'Luce', 'Disciplina'],
-                img: './imgs/Elfo.png',
+                img: './imgs/dei/Elfo.png',
                 description: '',
                 showDescription: false
             },
@@ -50,7 +50,7 @@ export const useGodsStore = defineStore('god', {
                 race: 'Gnomo',
                 name: 'Zoe',
                 domains: ['Gnomi', 'Oscurità', 'Morte'],
-                img: './imgs/Gnomo.png',
+                img: './imgs/dei/Gnomo.png',
                 description: '',
                 showDescription: false
             },
@@ -59,7 +59,7 @@ export const useGodsStore = defineStore('god', {
                 race: 'Goliath',
                 name: 'Rok il Distruttore',
                 domains: ['Goliath', 'Distruzione', 'Ambizione'],
-                img: './imgs/Goliath.png',
+                img: './imgs/dei/Goliath.png',
                 description: '',
                 showDescription: false
             },
@@ -68,7 +68,7 @@ export const useGodsStore = defineStore('god', {
                 race: 'Halfling',
                 name: 'Estella',
                 domains: ['Halfling', 'Magia', 'Fortuna'],
-                img: './imgs/Halfling.png',
+                img: './imgs/dei/Halfling.png',
                 description: '',
                 showDescription: false
             },
@@ -77,7 +77,7 @@ export const useGodsStore = defineStore('god', {
                 race: 'Nano',
                 name: 'Mormonth',
                 domains: ['Nani', 'Protezione', 'Natura'],
-                img: './imgs/Nano.png',
+                img: './imgs/dei/Nano.png',
                 description: '',
                 showDescription: false
             },
@@ -86,7 +86,7 @@ export const useGodsStore = defineStore('god', {
                 race: 'Orco',
                 name: 'Ruokshak',
                 domains: ['Orchi', 'Conoscenza', 'Empatia'],
-                img: './imgs/Orco.png',
+                img: './imgs/dei/Orco.png',
                 description: '',
                 showDescription: false
             },
@@ -95,7 +95,7 @@ export const useGodsStore = defineStore('god', {
                 race: 'Tiefling',
                 name: 'Trixie',
                 domains: ['Tiefling', 'Arte', 'Viaggi'],
-                img: './imgs/Tiefling.png',
+                img: './imgs/dei/Tiefling.png',
                 description: '',
                 showDescription: false
             },
@@ -104,7 +104,7 @@ export const useGodsStore = defineStore('god', {
                 race: 'Umano',
                 name: '"Dio degli Uomini"',
                 domains: ['Umani', 'Controllo', 'Segreti'],
-                img: './imgs/Umano.png',
+                img: './imgs/dei/Umano.png',
                 description: '',
                 showDescription: false
             }
