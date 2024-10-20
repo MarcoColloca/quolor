@@ -10,7 +10,6 @@ const props = defineProps<{
 
 const events = props.era.events;
 
-// Funzioni
 const toggleEvents = timelineStore.toggleEvents;
 
 </script>
@@ -20,11 +19,16 @@ const toggleEvents = timelineStore.toggleEvents;
        
         <div class="my-modal-box">
             <h1 class="text-coral text-3xl">{{ props.era.title }}</h1>
-            <ul class="list-disc" v-if="events.length">
+            <ul class="w-full" v-if="events.length">
                 {{ console.log(events.length) }}
                 <li v-for="(event, i) in events" :key="i">
-                    <p>
-                        {{ event }}
+                    <p class="flex justify-between w-full">
+                        <strong class="text-red-500 w-2/12 text-right">
+                         Anno  {{ event.year }}:
+                        </strong>
+                        <span class="px-3 w-10/12">
+                            {{ event.event }}
+                        </span>
                     </p>
                 </li>
             </ul>
